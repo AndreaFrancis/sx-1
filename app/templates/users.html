@@ -1,0 +1,33 @@
+<div ng-show="!onLine">
+<div class="highlight-module  highlight-module--center   highlight-module--learning">
+  <div class="highlight-module__container  icon-exclamation ">
+    <div class="highlight-module__content   g-wide--push-1 g-wide--pull-1  g-medium--pull-1   ">
+      <p class="highlight-module__title"> Modo offline</p>
+      <p class="highlight-module__text"> La informacion se almacenara localmente</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<a  class="button--primary" ng-click="openAddUserModal()">Nuevo</a>
+
+<table class="table-4">
+  <colgroup>
+    <col span="1">
+    <col span="1">
+    <col span="1">
+    <col span="1">
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Nombre de usuario</th>
+    <th>Password</th>
+  </thead>
+  </tr>
+  <tr ng-repeat="user in users">
+    <td>{{ user.name}}</td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.password }}</td>
+  </tr>
+</table>
